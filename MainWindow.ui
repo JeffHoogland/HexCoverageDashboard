@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>407</width>
+    <width>603</width>
     <height>662</height>
    </rect>
   </property>
@@ -14,7 +14,7 @@
    <string>Hex Coverage Dashboard</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout_8">
+   <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QFrame" name="frame">
       <property name="frameShape">
@@ -154,6 +154,50 @@
       </layout>
      </widget>
     </item>
+    <item>
+     <widget class="QGroupBox" name="buttonBox">
+      <property name="title">
+       <string>Scene Control</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QPushButton" name="startRound">
+         <property name="text">
+          <string>Start Round</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="showBooth">
+         <property name="text">
+          <string>Show Booth</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="showSlide">
+         <property name="text">
+          <string>Show Current Slide</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="showGameScreen">
+         <property name="text">
+          <string>Show Game Screen</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="endRound">
+         <property name="text">
+          <string>End Round</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -161,7 +205,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>407</width>
+     <width>603</width>
      <height>22</height>
     </rect>
    </property>

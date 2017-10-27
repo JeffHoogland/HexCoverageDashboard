@@ -4,14 +4,18 @@ A tool for quickly and easily updating information on live MTG Streams
 By: Jeff Hoogland
 """
 
+OBSID = "18874372"
+
 import sys, os
 from PySide.QtGui import *
 from PySide.QtCore import *
 from ui_MainWindow import Ui_MainWindow
 
 from os import listdir
+import pyautogui
 import os.path
 import shutil
+import random
 
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -55,7 +59,35 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 myfile.write(writeText)
     
     def assignWidgets(self):
-        self.slideSelector.activated[str].connect(self.slideSelected)  
+        self.slideSelector.activated[str].connect(self.slideSelected)
+        self.startRound.clicked.connect(self.startRoundPressed)
+        self.showSlide.clicked.connect(self.showSlidePressed)
+        self.showBooth.clicked.connect(self.showBoothPressed)
+        self.showGameScreen.clicked.connect(self.showGameScreenPressed)
+        self.endRound.clicked.connect(self.endRoundPressed)
+    
+    def startRoundPressed(self):
+        """OBS doesn't accept this for some reason
+        pyautogui.keyDown("control")
+        pyautogui.keyDown("shift")
+        pyautogui.press("1")
+        pyautogui.keyUp("shift")
+        pyautogui.keyUp("control")"""
+        
+        os.system("xdotool windowactivate %s; xdotool key ctrl+shift+1"%OBSID)
+        os.system("sleep 10.5; xdotool windowactivate %s; xdotool key ctrl+shift+2"%OBSID)
+    
+    def endRoundPressed(self):
+        os.system("xdotool windowactivate %s; xdotool key ctrl+shift+%s"%(OBSID, random.randint(5,6)))
+        
+    def showSlidePressed(self):
+        os.system("xdotool windowactivate %s; xdotool key ctrl+shift+4"%OBSID)
+    
+    def showBoothPressed(self):
+        os.system("xdotool windowactivate %s; xdotool key ctrl+shift+3"%OBSID)
+    
+    def showGameScreenPressed(self):
+        os.system("xdotool windowactivate %s; xdotool key ctrl+shift+2"%OBSID)
     
     def populateSlides(self):
         for f in listdir(self.SlidesPath):

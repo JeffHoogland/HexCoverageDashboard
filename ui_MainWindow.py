@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'MainWindow.ui'
 #
-# Created: Fri Oct 27 10:49:26 2017
+# Created: Fri Oct 27 13:01:33 2017
 #      by: pyside-uic 0.2.15 running on PySide 1.2.2
 #
 # WARNING! All changes made in this file will be lost!
@@ -12,11 +12,11 @@ from PySide import QtCore, QtGui
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(407, 662)
+        MainWindow.resize(603, 662)
         self.centralwidget = QtGui.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.verticalLayout_8 = QtGui.QVBoxLayout(self.centralwidget)
-        self.verticalLayout_8.setObjectName("verticalLayout_8")
+        self.horizontalLayout = QtGui.QHBoxLayout(self.centralwidget)
+        self.horizontalLayout.setObjectName("horizontalLayout")
         self.frame = QtGui.QFrame(self.centralwidget)
         self.frame.setFrameShape(QtGui.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtGui.QFrame.Raised)
@@ -86,10 +86,30 @@ class Ui_MainWindow(object):
         self.hashTag.setObjectName("hashTag")
         self.verticalLayout_4.addWidget(self.hashTag)
         self.verticalLayout_5.addWidget(self.eventBox)
-        self.verticalLayout_8.addWidget(self.frame)
+        self.horizontalLayout.addWidget(self.frame)
+        self.buttonBox = QtGui.QGroupBox(self.centralwidget)
+        self.buttonBox.setObjectName("buttonBox")
+        self.verticalLayout_8 = QtGui.QVBoxLayout(self.buttonBox)
+        self.verticalLayout_8.setObjectName("verticalLayout_8")
+        self.startRound = QtGui.QPushButton(self.buttonBox)
+        self.startRound.setObjectName("startRound")
+        self.verticalLayout_8.addWidget(self.startRound)
+        self.showBooth = QtGui.QPushButton(self.buttonBox)
+        self.showBooth.setObjectName("showBooth")
+        self.verticalLayout_8.addWidget(self.showBooth)
+        self.showSlide = QtGui.QPushButton(self.buttonBox)
+        self.showSlide.setObjectName("showSlide")
+        self.verticalLayout_8.addWidget(self.showSlide)
+        self.showGameScreen = QtGui.QPushButton(self.buttonBox)
+        self.showGameScreen.setObjectName("showGameScreen")
+        self.verticalLayout_8.addWidget(self.showGameScreen)
+        self.endRound = QtGui.QPushButton(self.buttonBox)
+        self.endRound.setObjectName("endRound")
+        self.verticalLayout_8.addWidget(self.endRound)
+        self.horizontalLayout.addWidget(self.buttonBox)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 407, 22))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 603, 22))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(MainWindow)
@@ -117,4 +137,10 @@ class Ui_MainWindow(object):
         self.playerRecord2.setText(QtGui.QApplication.translate("MainWindow", "C-D", None, QtGui.QApplication.UnicodeUTF8))
         self.eventBox.setTitle(QtGui.QApplication.translate("MainWindow", "Event Information", None, QtGui.QApplication.UnicodeUTF8))
         self.hashTag.setText(QtGui.QApplication.translate("MainWindow", "#HexEvent", None, QtGui.QApplication.UnicodeUTF8))
+        self.buttonBox.setTitle(QtGui.QApplication.translate("MainWindow", "Scene Control", None, QtGui.QApplication.UnicodeUTF8))
+        self.startRound.setText(QtGui.QApplication.translate("MainWindow", "Start Round", None, QtGui.QApplication.UnicodeUTF8))
+        self.showBooth.setText(QtGui.QApplication.translate("MainWindow", "Show Booth", None, QtGui.QApplication.UnicodeUTF8))
+        self.showSlide.setText(QtGui.QApplication.translate("MainWindow", "Show Current Slide", None, QtGui.QApplication.UnicodeUTF8))
+        self.showGameScreen.setText(QtGui.QApplication.translate("MainWindow", "Show Game Screen", None, QtGui.QApplication.UnicodeUTF8))
+        self.endRound.setText(QtGui.QApplication.translate("MainWindow", "End Round", None, QtGui.QApplication.UnicodeUTF8))
 
