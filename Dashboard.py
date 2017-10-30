@@ -4,7 +4,7 @@ A tool for quickly and easily updating information on live MTG Streams
 By: Jeff Hoogland
 """
 
-OBSID = "18874372"
+OBSID = "25165828"
 
 import sys, os
 from PySide.QtGui import *
